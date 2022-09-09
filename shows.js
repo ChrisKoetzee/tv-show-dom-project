@@ -72,7 +72,7 @@ function getAllShows() {
       "officialSite": "https://itvstudios.com/programmes/hornblower",
       "schedule": {
         "time": "20:00",
-        "days": [
+      "days": [
           "Monday",
           "Sunday"
         ]
