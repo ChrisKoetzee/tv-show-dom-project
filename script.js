@@ -1,63 +1,53 @@
 //You can edit ALL of the code here
 
-// const search = document.createElement("input");
-// document.getElementsByName("search").style.width = '300px';
-// document.getElementsByName("search").style.cssFloat = "left",
-// search.setAttribute("type", "text",)
-// document.getElementsByName("search").placeholder = "search";
-// const divSearch = document.createElement("div").firstChild;
-// const bod = document.getElementsByName("body")
-// bod.append(divSearch, search);
-// search.style.cssFloat = left;
-// search.width = 2fr;
-// container.appendChild(search)
-
-
 function setup() {
   const allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
   // console.log(getAllEpisodes());
 }
 
+let container = document.querySelector('#root');
+let searchBar = document.createElement("input");
+
+  console.log(searchBar + "is my searchBar");
+  console.log(container + "is my holder");
+
+  container.appendChild(searchBar);
+  searchBar.setAttribute("type", "text");
+  searchBar.setAttribute("id", "search");
+  searchBar.setAttribute("placeholder", "search for Episode");
+  document.getElementById("search").style.zIndex = "1";
+  document.getElementById("search").style.position = "fixed";
+  document.getElementById("search").style.margin = "auto";
+  
+  console.log(searchBar);
+
+  // searchBar.addEventListener("keyup", (e) => {
+  //   console.log(searchBar);
+    // const searchInput = e.target.value.toLowerCase();
+    // const filteredEpisodes = container.filter(searchEp => {
+    //   return (
+    //     searchEp.name.toLowerCase().includes(searchInput) || 
+    //     searchEp.summary.toLowerCase().includes(searchInput)
+    //     );
+    // })
+    // console.log(getAllEpisodes(filteredEpisodes));
+  // })
+
+
 function makePageForEpisodes(episodeList) {
-  // const rootElem = document.getElementById("root");
-  // rootElem.textContent = `Got ${episodeList.length} episode(s)`;
-
-  let output = "";
-
-  let container = document.querySelector('#root');
-
+let output = "";
   for (let value of episodeList) {
     console.log(value);
-
     output += `
-    <div class = "episode">
+    <div class = "episode" style = "z-index:2;">
     <h3 class = "episode--name-season">${value.name} - S0${value.season}E0${value.number}</h3>
     <img class = "episode.avatar" src=${value.image.medium}>
     <p class = "episode--summary">${value.summary}</p>
     <a class = "episode--link" href = "#${value.links}">Link to TVMaze.com</a>
     </div>
     `
-    
   }
   container.innerHTML = output;
-
-  let input = "";
-
-  let searchTainer = document.createElement("div").firstChild.innerHTML;
-  let search = document.createElement("INPUT");
-  let bod = document.getElementsByName("Body")
-
-  bod.appendChild(searchTainer);
-  searchTainer.appendChild(search);
-
-  
- 
 }
-
-// episodeLis.forEach(element => {
-//   return document.getElementById("root").style.flexFlow = "row nowrap";
-// });
-
-
 window.onload = setup;
