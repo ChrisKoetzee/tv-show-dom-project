@@ -18,7 +18,17 @@ body {
 .episode {
   background-color: cyan;
   display: grid;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 50px;
+}
+
+#search {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-top: 20;
+  width: 33.3%;
+  height: 20px;
+  
 }
