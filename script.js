@@ -43,7 +43,7 @@ window.onload = setup;
 console.log(searchBar);
 
 let filtered = Object.keys(getAllEpisodes)
-console.log(filtered + "begining");
+console.log(filtered + "beginning");
 
 searchBar.addEventListener("keyup", (e) => {
   const searchInput = e.target.key;

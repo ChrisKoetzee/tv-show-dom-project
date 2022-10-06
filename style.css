@@ -32,3 +32,8 @@ body {
   height: 20px;
   
 }
+
+#searchBar {
+  margin-top: 5rem;
+  margin-left: 5rem
+}
