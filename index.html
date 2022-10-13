@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project |  Chris Koetzee (ChrisKoetze)</title>
-    <link href="style.css" rel="stylesheet"/>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
 
-  <body>
-    <form>
-      <input type = "text" id = "searchBar"></input>
-    </form>    
-    <div id="root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Show Project | Chris Koetzee (ChrisKoetze)</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+<body>
+  <form>
+    <h1>Chris TV Shows Poject</h1>
+    <div id=searchDiv>
+      <input type="text" id="searchBar" placeholder="search for Episode"></input>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
-  </body>
-</html> 
+      <div class="dropDown-season">
+        <button class="dropDown-season-Btn">Hover to select a Season</button>
+        <div class="dropDown-season-content">
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="dropDown-episode">
+        <button class="dropDown-episode-Btn">Hover to select a Episode</button>
+        <div class="dropDown-episode-content">
+          <a href="#"></a>
+        </div>
+      </div>
+
+    </div>
+  </form>
+  <div id="root">
+    <ul id='searchList'></ul>pret
+  </div>
+
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <script src="episodes.js"></script>
+
+  <!-- Loads YOUR javascript code -->
+  <script src="script.js"></script>
+</body>
+
+</html>
