@@ -1,0 +1,25 @@
+{
+  "name": "tv-show-dom-project",
+  "version": "1.0.0",
+  "description": "Dom manipulation",
+  "main": "episodes.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisKoetzee/tv-show-dom-project.git"
+  },
+  "keywords": [
+    "tv-shows"
+  ],
+  "author": "ChrisKoetzee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisKoetzee/tv-show-dom-project/issues"
+  },
+  "homepage": "https://github.com/ChrisKoetzee/tv-show-dom-project#readme",
+  "dependencies": {
+    "tv-show-dom-project": "file:"
+  }
+}
